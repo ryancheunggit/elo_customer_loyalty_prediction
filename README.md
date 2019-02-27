@@ -1,10 +1,10 @@
 # [Elo Merchant Category Recommendation](https://www.kaggle.com/c/elo-merchant-category-recommendation)
 10 days hack for 68th place 
 
-As my time is limited, I tried not to try too out of box stuff, no fancy features creation, no fancy feature selection, no post-processing, no massive ensemble. 
+As my time was limited, I tried not to try too out of box stuff, no fancy features creation, no fancy feature selection, no post-processing, no massive ensemble. 
 
 1. Shifted transactional datasets.
-  + The data in historical transaction all have `month_lag <= 0`, and the data in new transaction all have `month_lag > 01`, plus the condition that the combination of `card_id & merchant_id` in new does not exist in historical. 
+  + The data in historical transaction all have `month_lag <= 0`, and the data in new transaction all have `month_lag > 1` plus the condition that the combination of `card_id & merchant_id` in new does not exist in historical. 
   + The preprocessing step is to mimic the historical transaction and new transaction split done by elo for each customer. I shifted the dividing `month_lag` forward and generate shifted version of new transactions. 
   + These shifted version of dataset were still useful for predicting customer loyalty scores, obviously not as predictive as the full dataset, but models built on shifted datasets were forced to learn things that's not most recent. 
 2. Features.
