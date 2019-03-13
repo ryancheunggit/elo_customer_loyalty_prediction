@@ -1,5 +1,5 @@
 # [Elo Merchant Category Recommendation](https://www.kaggle.com/c/elo-merchant-category-recommendation)
-10 days hack for 68th place 
+10 days hack for 66th place 
 
 As my time was limited, I tried not to try too out of box stuff, no fancy features creation, no fancy feature selection, no post-processing, no massive ensemble. 
 
